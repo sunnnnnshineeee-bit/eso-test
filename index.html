@@ -42,8 +42,10 @@
                     animation: {
                         'float': 'float 6s ease-in-out infinite',
                         'spin-slow': 'spin 15s linear infinite',
-                        'marquee': 'marquee 20s linear infinite',
                         'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
+                        'ripple': 'ripple 2.5s cubic-bezier(0, 0.2, 0.8, 1) infinite',
+                        'fade-out': 'fadeOut 1s ease-out forwards 2.5s',
+                        'marquee': 'marquee 20s linear infinite', // 新增跑马灯动画
                     },
                     keyframes: {
                         float: {
@@ -163,6 +165,8 @@
         </div>
     </div>
 
+    <!-- 背景网格层 -->
+    <div class="fixed inset-0 bg-grid-pattern bg-grid pointer-events-none z-0"></div>
     <!-- 顶部导航 -->
     <nav class="fixed top-0 w-full z-50 px-6 py-4 flex justify-between items-center bg-white/90 backdrop-blur-sm border-b-2 border-es-blue/10">
         <div class="flex items-center gap-2">
