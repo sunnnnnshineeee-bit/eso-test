@@ -47,7 +47,7 @@
                         'fade-out': 'fadeOut 1s ease-out forwards 2.5s',
                         'marquee': 'marquee 20s linear infinite', // 新增跑马灯动画
                     },
-                    keyframes: {
+                  keyframes: {
                         float: {
                             '0%, 100%': { transform: 'translateY(0)' },
                             '50%': { transform: 'translateY(-20px)' },
@@ -56,9 +56,17 @@
                             '0%, 100%': { opacity: '1', filter: 'brightness(1)' },
                             '50%': { opacity: '0.8', filter: 'brightness(1.2)' },
                         },
-                        marquee: {
+                        ripple: { 
+                            '0%': { transform: 'scale(0.5)', opacity: '1', borderWidth: '2px' },
+                            '100%': { transform: 'scale(3)', opacity: '0', borderWidth: '0px' },
+                        },
+                        fadeOut: {
+                            '0%': { opacity: '1', visibility: 'visible' },
+                            '100%': { opacity: '0', visibility: 'hidden' },
+                        },
+                        marquee: { // 新增跑马灯关键帧
                             '0%': { transform: 'translateX(0)' },
-                            '100%': { transform: 'translateX(-50%)' },
+                            '100%': { transform: 'translateX(-50%)' }, // 滚动一半的距离实现无缝循环
                         }
                     }
                 }
