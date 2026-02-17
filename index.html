@@ -99,13 +99,24 @@
             box-shadow: 4px 4px 0px 0px rgba(0, 85, 255, 0.15);
             transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
             overflow: hidden;
-        }
-        .cel-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 6px 6px 0px 0px #ff0066; /* hover时变粉色硬阴影 */
-            border-color: #ff0066;
+         .cel-card:hover {
+            transform: translate(-4px, -4px);
+             
+        }            
+        .shadow-orange:hover {
+            box-shadow: 8px 8px 0px #ff593d;
+            border-color: #ff593d;
         }
 
+        .shadow-green:hover {
+            box-shadow: 8px 8px 0px #c6eb49;
+            border-color: #c6eb49;
+        }
+
+        .shadow-purple:hover {
+            box-shadow: 8px 8px 0px #c6bfef;
+            border-color: #c6bfef;
+        }
         /* 描边文字 (用于大标题) */
         .text-outline-cel {
             -webkit-text-stroke: 2px #1a1a1a;
@@ -148,7 +159,7 @@
 <!-- ================= 开屏动画 ================= -->
 <div id="opening-screen" 
      class="fixed inset-0 z-[999] flex items-center justify-center 
-            bg-black pointer-events-auto">
+            bg-es-bg pointer-events-auto">
     <div class="relative w-full h-full flex items-center justify-center">
         
         <!-- 波纹扩散效果 -->
@@ -313,7 +324,7 @@
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <!-- Card 1 - STAGE CALL -->
-            <div class="cel-card group relative p-5">
+           <div class="cel-card shadow-orange group relative p-5">
                 <div class="absolute top-4 right-4 bg-es-orange text-white font-bold px-2 py-1 rounded text-xs border border-black shadow-[2px_2px_0_black]">01</div>
                 <div class="h-48 mb-6 overflow-hidden rounded-lg border border-gray-200 relative group-hover:border-es-orange transition-colors">
                      <img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&q=80&w=400" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
@@ -327,7 +338,7 @@
             </div>
 
             <!-- Card 2 - GOODS -->
-            <div class="cel-card group relative p-5 mt-0 md:-mt-4"> <!-- 错落感 -->
+            <div class="cel-card shadow-green group relative p-5" mt-0 md:-mt-4"> <!-- 错落感 -->
                 <div class="absolute top-4 right-4 bg-es-green text-white font-bold px-2 py-1 rounded text-xs border border-black shadow-[2px_2px_0_black]">02</div>
                 <div class="h-48 mb-6 overflow-hidden rounded-lg border border-gray-200 relative group-hover:border-es-green transition-colors">
                      <img src="https://images.unsplash.com/photo-1531972111231-7482a960e109?auto=format&fit=crop&q=80&w=400" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
@@ -341,7 +352,7 @@
             </div>
 
             <!-- Card 3 - PRODUCER ZONE -->
-            <div class="cel-card group relative p-5">
+          <div class="cel-card shadow-purple group relative p-5">
                 <div class="absolute top-4 right-4 bg-es-purple text-white font-bold px-2 py-1 rounded text-xs border border-black shadow-[2px_2px_0_black]">03</div>
                 <div class="h-48 mb-6 overflow-hidden rounded-lg border border-gray-200 relative group-hover:border-es-purple transition-colors">
                      <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&q=80&w=400" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
@@ -522,7 +533,7 @@
                 <div class="flex gap-3 items-start p-3 bg-gray-50 rounded-lg">
                     <span class="text-es-blue font-black">06.</span>
                     <p>未成年人请在家长知情并同意的情况下购票及参与活动。</p>
-                </div>
+                </div
                 <div class="flex gap-3 items-start p-3 bg-gray-50 rounded-lg">
                     <span class="text-es-blue font-black">07.</span>
                     <p>请妥善保管个人贵重物品、随身携带，注意财物安全。</p>
