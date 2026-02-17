@@ -80,34 +80,6 @@
             filter: drop-shadow(0 0 15px rgba(0, 85, 255, 0.3));
         }
 
-    <!-- ================= 开屏动画 (独立页) ================= -->
-    <div id="opening-screen" class="fixed inset-0 z-[100] flex items-center justify-center animate-fade-out pointer-events-none">
-        <div class="relative w-full h-full flex items-center justify-center">
-
-            <!-- 波纹扩散效果 -->
-            <div class="absolute border border-es-blue/60 rounded-full w-48 h-48 animate-ripple" style="animation-delay: 0s;"></div>
-            <div class="absolute border border-es-pink/60 rounded-full w-48 h-48 animate-ripple" style="animation-delay: 0.8s;"></div>
-            <div class="absolute border border-es-bg/40 rounded-full w-48 h-48 animate-ripple" style="animation-delay: 1.6s;"></div>
-
-            <!-- 核心 SVG 星星 -->
-            <svg viewBox="0 0 200 200" class="w-40 h-40 md:w-56 md:h-56 opening-star z-10 animate-pulse-glow">
-                <defs>
-                    <linearGradient id="openingStarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" style="stop-color:#4b5ee9;stop-opacity:1" />
-                        <stop offset="50%" style="stop-color:#ffffff;stop-opacity:1" />
-                        <stop offset="100%" style="stop-color:#f63479;stop-opacity:1" />
-                    </linearGradient>
-                </defs>
-                <path d="M100 10 L120 80 L190 100 L120 120 L100 190 L80 120 L10 100 L80 80 Z" fill="url(#openingStarGrad)" />
-                <path d="M100 20 L110 85 L175 100 L110 115 L100 180 L90 115 L25 100 L90 85 Z" fill="rgba(255,255,255,0.5)" />
-            </svg>
-
-            <!-- 加载文字 -->
-            <div class="absolute bottom-24 text-es-bg/50 font-display text-sm tracking-[0.5em] animate-pulse">
-                INITIALIZING...
-            </div>
-        </div>
-    </div>
         
         /* 赛璐璐风格卡片 */
         .cel-card {
@@ -161,6 +133,35 @@
     </style>
 </head>
 <body class="font-body selection:bg-es-pink selection:text-white">
+    
+      <!-- ================= 开屏动画 (独立页) ================= -->
+    <div id="opening-screen" class="fixed inset-0 z-[100] flex items-center justify-center animate-fade-out pointer-events-none">
+        <div class="relative w-full h-full flex items-center justify-center">
+
+            <!-- 波纹扩散效果 -->
+            <div class="absolute border border-es-blue/60 rounded-full w-48 h-48 animate-ripple" style="animation-delay: 0s;"></div>
+            <div class="absolute border border-es-pink/60 rounded-full w-48 h-48 animate-ripple" style="animation-delay: 0.8s;"></div>
+            <div class="absolute border border-es-bg/40 rounded-full w-48 h-48 animate-ripple" style="animation-delay: 1.6s;"></div>
+
+            <!-- 核心 SVG 星星 -->
+            <svg viewBox="0 0 200 200" class="w-40 h-40 md:w-56 md:h-56 opening-star z-10 animate-pulse-glow">
+                <defs>
+                    <linearGradient id="openingStarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#4b5ee9;stop-opacity:1" />
+                        <stop offset="50%" style="stop-color:#ffffff;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#f63479;stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+                <path d="M100 10 L120 80 L190 100 L120 120 L100 190 L80 120 L10 100 L80 80 Z" fill="url(#openingStarGrad)" />
+                <path d="M100 20 L110 85 L175 100 L110 115 L100 180 L90 115 L25 100 L90 85 Z" fill="rgba(255,255,255,0.5)" />
+            </svg>
+
+            <!-- 加载文字 -->
+            <div class="absolute bottom-24 text-es-bg/50 font-display text-sm tracking-[0.5em] animate-pulse">
+                INITIALIZING...
+            </div>
+        </div>
+    </div>
 
     <!-- 顶部导航 -->
     <nav class="fixed top-0 w-full z-50 px-6 py-4 flex justify-between items-center bg-white/90 backdrop-blur-sm border-b-2 border-es-blue/10">
