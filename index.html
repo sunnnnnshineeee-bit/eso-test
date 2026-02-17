@@ -92,17 +92,18 @@
 
         
         /* 赛璐璐风格卡片 */
-        .cel-card {
-            background: white;
-            border: 2px solid #1a1a1a;
-            border-radius: 12px; /* 圆角增加动画感 */
-            box-shadow: 4px 4px 0px 0px rgba(0, 85, 255, 0.15);
-            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-            overflow: hidden;
-         .cel-card:hover {
-            transform: translate(-4px, -4px);
-             
-        }            
+    .cel-card {
+    background: white;
+    border: 2px solid #1a1a1a;
+    border-radius: 12px;
+    box-shadow: 4px 4px 0px 0px rgba(0, 85, 255, 0.15);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    overflow: hidden;
+}
+
+.cel-card:hover {
+    transform: translate(-4px, -4px);
+}         
         .shadow-orange:hover {
             box-shadow: 8px 8px 0px #ff593d;
             border-color: #ff593d;
@@ -338,7 +339,7 @@
             </div>
 
             <!-- Card 2 - GOODS -->
-            <div class="cel-card shadow-green group relative p-5" mt-0 md:-mt-4"> <!-- 错落感 -->
+           <div class="cel-card shadow-green group relative p-5 mt-0 md:-mt-4"> <!-- 错落感 -->
                 <div class="absolute top-4 right-4 bg-es-green text-white font-bold px-2 py-1 rounded text-xs border border-black shadow-[2px_2px_0_black]">02</div>
                 <div class="h-48 mb-6 overflow-hidden rounded-lg border border-gray-200 relative group-hover:border-es-green transition-colors">
                      <img src="https://images.unsplash.com/photo-1531972111231-7482a960e109?auto=format&fit=crop&q=80&w=400" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
